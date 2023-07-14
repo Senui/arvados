@@ -339,6 +339,7 @@ type S3VolumeDriverParameters struct {
 	RaceWindow         Duration
 	UnsafeDelete       bool
 	PrefixLength       int
+	HostnameImmutable  bool
 }
 
 type AzureVolumeDriverParameters struct {

@@ -70,6 +70,11 @@ h2(#example). Configuration example
           # might be needed for other S3-compatible services.
           V2Signature: false
 
+          # Prevent the SDK from mutating your custom endpoints by
+          # setting HostnameImmutable to `true`. See:
+          # https://aws.github.io/aws-sdk-go-v2/docs/configuring-sdk/endpoints/
+          HostnameImmutable: false
+
           # By default keepstore stores data using the MD5 checksum
           # (32 hexadecimal characters) as the object name, e.g.,
           # "0123456abc...". Setting PrefixLength to 3 changes this

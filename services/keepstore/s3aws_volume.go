@@ -182,6 +182,7 @@ func (v *S3AWSVolume) check(ec2metadataHostname string) error {
 				return aws.Endpoint{
 					URL:           v.Endpoint,
 					SigningRegion: region,
+					HostnameImmutable: v.HostnameImmutable,
 				}, nil
 			} else if service == "ec2metadata" && ec2metadataHostname != "" {
 				return aws.Endpoint{
